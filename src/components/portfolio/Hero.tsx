@@ -14,7 +14,7 @@ export function Hero() {
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-[1.4fr_1fr] gap-12 items-center w-full">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-[1fr_1fr] gap-12 items-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,9 +78,9 @@ export function Hero() {
             <img
               src={avatar}
               alt="Muhammad Sadiq"
-              width={320}
-              height={320}
-              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full ring-1 ring-primary/20"
+              width={448}
+              height={448}
+              className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] object-cover rounded-full ring-2 ring-primary/30"
             />
           </div>
         </motion.div>
