@@ -71,7 +71,9 @@ export function Hero() {
               className="absolute -inset-4 rounded-full blur-3xl opacity-40"
               style={{ backgroundImage: "var(--gradient-primary)" }}
             />
-            <div
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 24, ease: "linear", repeat: Infinity }}
               className="absolute -inset-1 rounded-full opacity-80"
               style={{ backgroundImage: "var(--gradient-primary)" }}
             />
