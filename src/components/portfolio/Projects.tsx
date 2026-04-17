@@ -1,41 +1,47 @@
 import { Reveal } from "./Reveal";
+import projAiAgent from "@/assets/svc-ai-agents.jpg";
+import projGhlSms from "@/assets/svc-ghl.webp";
+import projReviews from "@/assets/svc-reviews.webp";
+import projChatbot from "@/assets/proj-growth-bot.webp";
+import projZapier from "@/assets/svc-integrations.png";
+import projSocial from "@/assets/proj-social-bots.webp";
 
 const projects = [
   {
     title: "AI Agent + GHL Automation System",
     desc: "Built a fully automated AI agent pipeline integrated with GoHighLevel to handle inbound leads, qualify prospects, and trigger follow-up sequences — reducing response time from hours to seconds.",
     tags: ["AI Agent", "GHL", "Automation"],
-    gradient: "from-cyan-500/30 to-blue-600/30",
+    image: projAiAgent,
   },
   {
     title: "GHL A2P 10DLC + Twilio SMS Automation",
     desc: "Set up A2P 10DLC registration and deployed SMS automation workflows within GHL for seamless, compliant client communication at scale.",
     tags: ["GHL", "Twilio", "SMS"],
-    gradient: "from-emerald-500/30 to-teal-600/30",
+    image: projGhlSms,
   },
   {
     title: "Google Review Automation Package",
     desc: "Developed a replicable Google Review automation system for local service businesses — automating review requests and growing 5-star ratings.",
     tags: ["GHL", "Reputation Management", "Automation"],
-    gradient: "from-amber-500/30 to-orange-600/30",
+    image: projReviews,
   },
   {
     title: "AI CEO Bot – GHL Chatbot Integration",
     desc: "Built a custom AI-powered chatbot using Zappy Chat + OpenAI integrated into GoHighLevel for automated lead capture and CRM pipeline management.",
     tags: ["AI Chatbot", "Zappy Chat", "GHL"],
-    gradient: "from-violet-500/30 to-fuchsia-600/30",
+    image: projChatbot,
   },
   {
     title: "Multi-Tool Integration via Zapier & Make.com",
     desc: "Connected Facebook Lead Ads, email platforms, CRMs, and GHL into a unified automation ecosystem using Zapier and Make.com webhooks.",
     tags: ["Zapier", "Make.com", "API", "Integration"],
-    gradient: "from-pink-500/30 to-rose-600/30",
+    image: projZapier,
   },
   {
     title: "Social Media Planning & Automation",
     desc: "Designed and implemented a social media content calendar with automated scheduling and cross-platform publishing for a business client.",
     tags: ["Social Media", "Automation", "Content Planning"],
-    gradient: "from-sky-500/30 to-indigo-600/30",
+    image: projSocial,
   },
 ];
 
@@ -57,13 +63,14 @@ export function Projects() {
                 className="group h-full rounded-2xl bg-card border border-border hover:border-primary/60 transition-all overflow-hidden hover:-translate-y-1"
                 style={{ boxShadow: "var(--shadow-card)" }}
               >
-                <div
-                  className={`h-40 bg-gradient-to-br ${p.gradient} relative flex items-center justify-center`}
-                >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_50%)]" />
-                  <div className="text-5xl opacity-80 transition-transform group-hover:scale-110">
-                    {["🤖", "📱", "⭐", "💬", "🔗", "📅"][i]}
-                  </div>
+                <div className="h-44 overflow-hidden bg-muted relative">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent pointer-events-none" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold leading-snug">
