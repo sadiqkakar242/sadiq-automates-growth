@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Award } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 
 export function Hero() {
@@ -82,6 +82,21 @@ export function Hero() {
               height={448}
               className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] object-cover rounded-full ring-2 ring-primary/30"
             />
+            <motion.div
+              initial={{ opacity: 0, y: 12, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+              className="absolute bottom-4 -left-2 md:-left-4 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-card/95 backdrop-blur border border-primary/40 shadow-lg"
+              style={{ boxShadow: "var(--shadow-glow)" }}
+            >
+              <span className="flex items-center justify-center w-7 h-7 rounded-full bg-primary text-primary-foreground">
+                <Award size={14} strokeWidth={2.5} />
+              </span>
+              <div className="pr-2 leading-tight">
+                <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Upwork</div>
+                <div className="text-xs font-semibold text-foreground">Top Rated</div>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
