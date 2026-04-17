@@ -99,6 +99,16 @@ export function Hero() {
               className="absolute bottom-4 -left-2 md:-left-4 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-card/95 backdrop-blur border border-primary/40 shadow-lg"
               style={{ boxShadow: "var(--shadow-glow)" }}
             >
+              <motion.span
+                aria-hidden
+                className="absolute inset-0 rounded-full bg-primary/40 blur-md -z-10"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{
+                  opacity: [0, 0.55, 0.25, 0.55, 0.25, 0.55, 0.25, 0.55, 0.25, 0.55, 0.25, 0.55, 0.25, 0.55, 0.25, 0],
+                  scale: [0.95, 1.08, 0.98, 1.08, 0.98, 1.08, 0.98, 1.08, 0.98, 1.08, 0.98, 1.08, 0.98, 1.08, 0.98, 1],
+                }}
+                transition={{ duration: 15, delay: 0.7, ease: "easeInOut" }}
+              />
               <span className="flex items-center justify-center w-7 h-7 rounded-full bg-primary text-primary-foreground">
                 <Award size={14} strokeWidth={2.5} />
               </span>
