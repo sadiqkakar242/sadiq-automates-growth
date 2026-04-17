@@ -86,8 +86,16 @@ export function Hero() {
             />
             <motion.div
               initial={{ opacity: 0, y: 12, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                y: [12, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, -6, 0, 0],
+              }}
+              transition={{
+                opacity: { duration: 0.6, delay: 0.7, ease: "easeOut" },
+                scale: { duration: 0.6, delay: 0.7, ease: "easeOut" },
+                y: { duration: 15, delay: 0.7, ease: "easeInOut", times: undefined },
+              }}
               className="absolute bottom-4 -left-2 md:-left-4 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-card/95 backdrop-blur border border-primary/40 shadow-lg"
               style={{ boxShadow: "var(--shadow-glow)" }}
             >
