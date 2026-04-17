@@ -66,7 +66,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative">
+          <div className="relative bg-slate-500">
             <div
               className="absolute inset-0 rounded-full blur-2xl opacity-60"
               style={{ backgroundImage: "var(--gradient-primary)" }}
