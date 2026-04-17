@@ -1,33 +1,45 @@
 import { Reveal } from "./Reveal";
+import svcAiAgents from "@/assets/svc-ai-agents.jpg";
+import svcGhl from "@/assets/svc-ghl.webp";
+import svcIntegrations from "@/assets/svc-integrations.png";
+import svcChatbot from "@/assets/svc-chatbot.webp";
+import svcSocial from "@/assets/svc-social.webp";
+import svcReviews from "@/assets/svc-reviews.webp";
 
 const services = [
   {
     icon: "🤖",
+    image: svcAiAgents,
     title: "AI Agents & MCP Server Setup",
     desc: "Design and deploy intelligent AI agents and configure MCP servers to automate complex business processes and supercharge decision-making with minimal human input.",
   },
   {
     icon: "⚙️",
+    image: svcGhl,
     title: "GoHighLevel Setup & Management",
     desc: "Full GHL configuration — funnels, pipelines, automations, calendars, email/SMS sequences, AI Employee, Voice AI, and white-label sub-account setup for agencies.",
   },
   {
     icon: "🔗",
+    image: svcIntegrations,
     title: "Tool Integrations & API Connections",
     desc: "Connect your entire tech stack using Zapier, Make.com, and REST APIs — integrating CRMs, lead forms, chatbots, review tools, and more into one seamless system.",
   },
   {
     icon: "🧠",
+    image: svcChatbot,
     title: "AI Chatbot Development",
     desc: "Build AI-powered chatbots using ChatGPT, Zappy Chat, and Closebot integrated into GHL for 24/7 lead capture, customer support, and automated follow-ups.",
   },
   {
     icon: "📅",
+    image: svcSocial,
     title: "Social Media Planning & Automation",
     desc: "Plan, schedule, and automate your social media content across platforms — keeping your brand active and consistent without the manual effort.",
   },
   {
     icon: "⭐",
+    image: svcReviews,
     title: "Google Review & Reputation Management",
     desc: "Implement GHL's Google Review Package to automate review requests, monitor feedback, and grow your 5-star reputation on autopilot.",
   },
@@ -48,16 +60,26 @@ export function Services() {
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.06}>
               <div
-                className="group h-full rounded-2xl p-6 bg-card border border-border hover:border-primary/60 transition-all hover:-translate-y-1"
+                className="group h-full rounded-2xl bg-card border border-border hover:border-primary/60 transition-all hover:-translate-y-1 overflow-hidden"
                 style={{ boxShadow: "var(--shadow-card)" }}
               >
-                <div className="text-4xl mb-4 transition-transform group-hover:scale-110">
-                  {s.icon}
+                <div className="h-40 overflow-hidden bg-muted">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
-                <h3 className="text-lg font-semibold">{s.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  {s.desc}
-                </p>
+                <div className="p-6">
+                  <div className="text-3xl mb-3 transition-transform group-hover:scale-110">
+                    {s.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold">{s.title}</h3>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                    {s.desc}
+                  </p>
+                </div>
               </div>
             </Reveal>
           ))}
