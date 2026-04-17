@@ -1,10 +1,10 @@
 import { Reveal } from "./Reveal";
-import projAiAgent from "@/assets/svc-ai-agents.jpg";
+import projAiAgent from "@/assets/proj-ai-workflow.png";
 import projGhlSms from "@/assets/svc-ghl.webp";
 import projReviews from "@/assets/svc-reviews.webp";
-import projChatbot from "@/assets/proj-growth-bot.webp";
+import projChatbot from "@/assets/proj-ai-agent-2.png";
 import projZapier from "@/assets/svc-integrations.png";
-import projSocial from "@/assets/proj-social-bots.webp";
+import projSocial from "@/assets/proj-growth.png";
 
 const projects = [
   {
