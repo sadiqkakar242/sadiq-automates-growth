@@ -66,9 +66,13 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative bg-slate-500">
+          <div className="relative">
             <div
-              className="absolute inset-0 rounded-full blur-2xl opacity-60"
+              className="absolute -inset-4 rounded-full blur-3xl opacity-40"
+              style={{ backgroundImage: "var(--gradient-primary)" }}
+            />
+            <div
+              className="absolute -inset-1 rounded-full opacity-80"
               style={{ backgroundImage: "var(--gradient-primary)" }}
             />
             <img
@@ -76,8 +80,7 @@ export function Hero() {
               alt="Muhammad Sadiq"
               width={320}
               height={320}
-              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary/40"
-              style={{ boxShadow: "var(--shadow-glow)" }}
+              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full ring-1 ring-primary/20"
             />
           </div>
         </motion.div>
