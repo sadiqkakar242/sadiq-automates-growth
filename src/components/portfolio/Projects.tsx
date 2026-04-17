@@ -1,10 +1,10 @@
 import { Reveal } from "./Reveal";
-import projAiAgent from "@/assets/proj-ai-workflow.png";
-import projGhlSms from "@/assets/svc-ghl.webp";
-import projReviews from "@/assets/svc-reviews.webp";
-import projChatbot from "@/assets/proj-ai-agent-2.png";
-import projZapier from "@/assets/svc-integrations.png";
-import projSocial from "@/assets/proj-growth.png";
+import projAiAgent from "@/assets/proj-ai-agent-new.jpg";
+import projA2p from "@/assets/proj-a2p.png";
+import projReviews from "@/assets/proj-ai-workflow.png";
+import projChatbot from "@/assets/proj-chatbot-new.webp";
+import projZapier from "@/assets/proj-zapier-new.webp";
+import projSocial from "@/assets/proj-social-new.webp";
 
 const projects = [
   {
@@ -17,7 +17,7 @@ const projects = [
     title: "GHL A2P 10DLC + Twilio SMS Automation",
     desc: "Set up A2P 10DLC registration and deployed SMS automation workflows within GHL for seamless, compliant client communication at scale.",
     tags: ["GHL", "Twilio", "SMS"],
-    image: projGhlSms,
+    image: projA2p,
   },
   {
     title: "Google Review Automation Package",
