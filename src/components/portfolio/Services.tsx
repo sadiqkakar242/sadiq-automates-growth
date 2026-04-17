@@ -1,10 +1,10 @@
 import { Reveal } from "./Reveal";
-import svcAiAgents from "@/assets/svc-ai-agents.jpg";
+import svcAiAgents from "@/assets/svc-ai-agents-2.png";
 import svcGhl from "@/assets/svc-ghl.webp";
-import svcIntegrations from "@/assets/svc-integrations.png";
-import svcChatbot from "@/assets/svc-chatbot.webp";
-import svcSocial from "@/assets/svc-social.webp";
-import svcReviews from "@/assets/svc-reviews.webp";
+import svcIntegrations from "@/assets/svc-integrations-2.png";
+import svcChatbot from "@/assets/svc-chatbot-2.png";
+import svcSocial from "@/assets/svc-social-2.png";
+import svcReviews from "@/assets/svc-reviews-2.png";
 
 const services = [
   {
