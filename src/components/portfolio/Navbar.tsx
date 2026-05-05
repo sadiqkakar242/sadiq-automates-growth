@@ -29,11 +29,25 @@ export function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2 group" aria-label="SkAItech.pro home">
-          <span className="relative inline-flex items-center justify-center h-9 w-9 rounded-lg bg-gradient-to-br from-primary to-primary/60 shadow-[0_0_20px_oklch(0.82_0.16_210/0.45)]">
-            <span className="text-primary-foreground font-bold text-lg leading-none">A</span>
-            <span className="absolute -top-0.5 right-1 h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_8px_oklch(0.82_0.16_210)]" />
-          </span>
+        <a href="#home" className="flex items-center gap-2.5 group" aria-label="SkAItech.pro home">
+          <svg
+            viewBox="0 0 64 64"
+            className="h-8 w-8 md:h-9 md:w-9 drop-shadow-[0_0_12px_oklch(0.82_0.16_210/0.5)]"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="aGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="oklch(0.85 0.15 215)" />
+                <stop offset="100%" stopColor="oklch(0.55 0.22 255)" />
+              </linearGradient>
+            </defs>
+            {/* Sharp triangular A with inner cutout */}
+            <path
+              d="M32 4 L60 60 L46 60 L40 47 L24 47 L18 60 L4 60 Z M28 36 L36 36 L32 22 Z"
+              fill="url(#aGrad)"
+              fillRule="evenodd"
+            />
+          </svg>
           <span className="font-semibold tracking-tight text-foreground text-lg">
             SkAI<span className="text-primary">tech</span>
             <span className="text-muted-foreground font-normal">.pro</span>
