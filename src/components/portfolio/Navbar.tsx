@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/skaitech-logo.png";
 
 const links = [
   { label: "About", href: "#about" },
@@ -30,12 +29,15 @@ export function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#home" className="flex items-center" aria-label="SkAItech.pro home">
-          <img
-            src={logo}
-            alt="SkAItech.pro"
-            className="h-9 md:h-10 w-auto object-contain"
-          />
+        <a href="#home" className="flex items-center gap-2 group" aria-label="SkAItech.pro home">
+          <span className="relative inline-flex items-center justify-center h-9 w-9 rounded-lg bg-gradient-to-br from-primary to-primary/60 shadow-[0_0_20px_oklch(0.82_0.16_210/0.45)]">
+            <span className="text-primary-foreground font-bold text-lg leading-none">A</span>
+            <span className="absolute -top-0.5 right-1 h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_8px_oklch(0.82_0.16_210)]" />
+          </span>
+          <span className="font-semibold tracking-tight text-foreground text-lg">
+            SkAI<span className="text-primary">tech</span>
+            <span className="text-muted-foreground font-normal">.pro</span>
+          </span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
